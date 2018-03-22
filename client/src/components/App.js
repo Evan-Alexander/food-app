@@ -1,16 +1,30 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+
+const Header = () => <h2>Header</h2>;
+const InitialSearch = () => <h2>InitialSearch</h2>;
+const Footer = () => <h2>Footer</h2>;
+const ListView = () => <h2>ListView</h2>;
+const MapView = () => <h2>MapView</h2>;
+
+const Landing = () => <h2>Landing</h2>;
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Food Finder</h1>
-        </header>
-        <p className="App-intro">
-          What can we help you find?
-        </p>
+      <div>
+        <BrowserRouter>
+          <div>
+            <Header />
+            <Route exact path="/" component={Landing} />
+            <Route path="/search" component={InitialSearch} />
+            <Route path="/listview" component={ListView} />
+            <Route path="/mapview" component={MapView} />
+            <Footer />
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
