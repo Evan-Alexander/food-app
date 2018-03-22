@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+import Header from './Header';
 
-const Header = () => <h2>Header</h2>;
 const InitialSearch = () => <h2>InitialSearch</h2>;
 const Footer = () => <h2>Footer</h2>;
 const ListView = () => <h2>ListView</h2>;
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-          <div>
+          <div className="container">
             <Header />
             <Route exact path="/" component={Landing} />
             <Route path="/search" component={InitialSearch} />
