@@ -1,12 +1,17 @@
 
 .rest-list  li {
-  border: 1px solid black;
-  background-color: red;
+  border-bottom: .5px solid black;
+  border-right: .5px solid black;
+  background-color: #fff;
 }
 
 .map-container {
   background-image: url('./fake-map.png');
   background-size: contain;
   background-size: cover;
+}
 
+.body-container {
+  max-width: 100%;
+  padding: 0;
 }

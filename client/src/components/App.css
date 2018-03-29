@@ -12,3 +12,13 @@ li, ul {
 .col-3 {
   padding: 0;
 }
+.main-container {
+  max-width: 100%;
+  padding: 0;
+}
+/* @media (min-width: 1600px) {
+  .container {
+    width: 95%;
+  }
+
+} */
