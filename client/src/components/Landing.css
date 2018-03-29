@@ -1,0 +1,12 @@
+
+.rest-list  li {
+  border: 1px solid black;
+  background-color: red;
+}
+
+.map-container {
+  background-image: url('./fake-map.png');
+  background-size: contain;
+  background-size: cover;
+
+}

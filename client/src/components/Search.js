@@ -1,34 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button, Input } from 'reactstrap';
+import { Form, FormGroup, Button, Input } from 'reactstrap';
+import FaSearch from 'react-icons/lib/fa/search';
 
-Input.propTypes = {
-  children: PropTypes.node,
-  // type can be things like text, password, (typical input types) as well as select and textarea, providing children as you normally would to those.
-  type: PropTypes.string,
-  size: PropTypes.string,
-  bsSize: PropTypes.string,
-  // state: deprecated(PropTypes.string, 'Please use the prop "valid"'),
-  valid: PropTypes.bool, // applied the is-valid class when true, does nothing when false
-  invalid: PropTypes.bool, // applied the is-invalid class when true, does nothing when false
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  // ref will only get you a reference to the Input component, use innerRef to get a reference to the DOM input (for things like focus management).
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  // static: deprecated(PropTypes.bool, 'Please use the prop "plaintext"'),
-  plaintext: PropTypes.bool,
-  addon: PropTypes.bool,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-};
+
 
 export default class Search extends Component {
   render() {
     return (
-      <form className='navbar-form navbar-left' action="">
-        <Input type='text' placeholder='coffee, dinner, bars ...' />{' '}
-        <Input type='text' placeholder='location' />{' '}
-        <Button bsStyle='success' type='submit'>Search</Button>
-      </form>
+      <Form inline>
+        <FormGroup>
+          <Input type='text' placeholder='coffee, dinner, bars ...' />{' '}
+          <Input type='text' placeholder='location' />{' '}
+          <Button><FaSearch size={24}/></Button>
+        </FormGroup>
+      </Form>
     );
   }
 }

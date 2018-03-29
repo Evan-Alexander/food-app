@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './Header.css';
 import Search from './Search';
 
 import {
@@ -49,7 +50,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light expand="md">
+        <Navbar className="nav-container" color="faded" light expand="md">
           <NavbarBrand href="/">Food Finder</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -66,7 +67,7 @@ class Header extends Component {
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  DropDown Menu
+                  Drop Menu
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
